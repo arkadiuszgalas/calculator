@@ -1,4 +1,5 @@
 import os
+import art
 
 def clear():
    if os.name == 'nt' or os.name == 'posix':
@@ -21,7 +22,8 @@ def divide(num1,num2):
 start_new_calc = True
 
 while start_new_calc:
-   clear()
+   #clear()
+   print(art.logo)
    first_num = float(input("What's the first number?:"))
    continue_calc_with_output = True
 
