@@ -24,7 +24,7 @@ start_new_calc = True
 while start_new_calc:
    #clear()
    print(art.logo)
-   first_num = float(input("What's the first number?:"))
+   first_num = float(input("What's the first number?: "))
    continue_calc_with_output = True
 
    while continue_calc_with_output:
@@ -46,8 +46,11 @@ while start_new_calc:
          result = divide(first_num,second_num)
 
       print(f"{first_num} {operation_sel} {second_num} = {result}")
-      continue_calc_with_output_check = input(f"Type 'y' to continue calculating with {result}, ir type 'n' to start a new calculation:")
-      if continue_calc_with_output_check.upper() == 'N':
+      continue_calc_with_output_check = input(f"Type 'q' to exit calculator, type 'y' to continue calculating with {result}, or type 'n' to start a new calculation: ")
+      if continue_calc_with_output_check.upper() == 'Q':
+         continue_calc_with_output = False
+         start_new_calc = False
+      elif continue_calc_with_output_check.upper() == 'N':
          continue_calc_with_output = False
       else:
          continue_calc_with_output = True
